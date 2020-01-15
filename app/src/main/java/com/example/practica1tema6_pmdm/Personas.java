@@ -54,29 +54,38 @@ public class Personas extends AppCompatActivity {
 
         if (v.getId() == R.id.imgt1) {
             SharedPreferences prefs = getSharedPreferences("ficheroconfiguracion", Context.MODE_PRIVATE);
-            email = prefs.getString("prueba", "sss");
-            //telefono = ;
+            telefono = prefs.getString("Num1", "sss");
+            email = prefs.getString("Corr1", "sss");
         }
 
         if (v.getId() == R.id.imgt2) {
-            telefono = "tel:689668725";
-            email = "uqqu@gmail.com";
+            SharedPreferences prefs = getSharedPreferences("ficheroconfiguracion", Context.MODE_PRIVATE);
+            telefono = prefs.getString("Num2", "sss");
+            email = prefs.getString("Corr2", "sss");
         }
 
         if (v.getId() == R.id.imgt3) {
-
+            SharedPreferences prefs = getSharedPreferences("ficheroconfiguracion", Context.MODE_PRIVATE);
+            telefono = prefs.getString("Num3", "sss");
+            email = prefs.getString("Corr3", "sss");
         }
 
         if (v.getId() == R.id.imgt4) {
-
+            SharedPreferences prefs = getSharedPreferences("ficheroconfiguracion", Context.MODE_PRIVATE);
+            telefono = prefs.getString("Num4", "sss");
+            email = prefs.getString("Corr4", "sss");
         }
 
         if (v.getId() == R.id.imgt5) {
-
+            SharedPreferences prefs = getSharedPreferences("ficheroconfiguracion", Context.MODE_PRIVATE);
+            telefono = prefs.getString("Num5", "sss");
+            email = prefs.getString("Corr5", "sss");
         }
 
         if (v.getId() == R.id.imgt6) {
-
+            SharedPreferences prefs = getSharedPreferences("ficheroconfiguracion", Context.MODE_PRIVATE);
+            telefono = prefs.getString("Num6", "sss");
+            email = prefs.getString("Corr6", "sss");
         }
 
         inflater.inflate(R.menu.menuconxpersonas, menu);
