@@ -5,4 +5,7 @@
 
     <string name="mnPersona">Persona</string>
     <string name="mnBloc">Bloc de Notas</string>
+
+    <string name="mnLlamar">Llamar</string>
+    <string name="mnCorreo">Correo</string>
 </resources>
