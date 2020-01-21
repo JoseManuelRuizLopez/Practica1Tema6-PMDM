@@ -10,13 +10,33 @@
     <string name="mnCorreo">Correo</string>
 
     <string name="mnEdit">Editar</string>
-    
+
     <string name="lblPersona">Persona</string>
-    
+
     <string name="lblNumero">Numero de telefono</string>
     <string name="txtNumero">999999999</string>
     <string name="lblCorreo">Correo electronico</string>
     <string name="txtCorreo">eje@gmail.com</string>
+    <string name="btnAceptar">Aceptar</string>
+    <string name="btnCancelar">Cancelar</string>
+
+    <string name="selec">Selecciona...</string>
+    <string name="p1">1º Persona</string>
+    <string name="p2">2º Persona</string>
+    <string name="p3">3º Persona</string>
+    <string name="p4">4º Persona</string>
+    <string name="p5">5º Persona</string>
+    <string name="p6">6º Persona</string>
+
+    <string-array name="spnPersonas">
+        <item>@string/selec</item>
+        <item>@string/p1</item>
+        <item>@string/p2</item>
+        <item>@string/p3</item>
+        <item>@string/p4</item>
+        <item>@string/p5</item>
+        <item>@string/p6</item>
+    </string-array>
 
 
     <!-- TODO: Remove or change this placeholder text -->

@@ -16,18 +16,19 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import static android.Manifest.permission.CALL_PHONE;
 
 public class Personas extends AppCompatActivity {
 
+
     ImageView imgt1, imgt2, imgt3, imgt4, imgt5, imgt6;
 
     String telefono, email;
-
-    Fragment fragEdit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,30 @@ public class Personas extends AppCompatActivity {
         registerForContextMenu(imgt5);
         registerForContextMenu(imgt6);
 
+        /*
+        SharedPreferences prefs = getSharedPreferences("ficheroconfiguracion", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+
+        editor.putString("Num1", "tel:666666666");
+        editor.putString("Corr1", "Estamoaqui@gmail.com");
+
+        editor.putString("Num2", "tel:689668725");
+        editor.putString("Corr2", "Depressetion45@gmail.com");
+
+        editor.putString("Num3", "tel:601391131");
+        editor.putString("Corr3", "Quinterete@gmail.com");
+
+        editor.putString("Num4", "tel:666555777");
+        editor.putString("Corr4", "Theshitprogramer@gmail.com");
+
+        editor.putString("Num5", "tel:968452366");
+        editor.putString("Corr5", "Masterinos@gmail.com");
+
+        editor.putString("Num6", "tel:854756322");
+        editor.putString("Corr6", "Lordvader@gmail.com");
+
+        editor.commit();
+         */
     }
 
 
@@ -130,11 +155,16 @@ public class Personas extends AppCompatActivity {
         String mensaje = "";
         switch (item.getItemId()) {
             case R.id.mnEdit:
-                fragEdit = new FragEditar();
+                /*fragEdit = new FragEditar();
                 FragmentTransaction transacction = getSupportFragmentManager().beginTransaction();
                 transacction.add(R.id.contenedor, fragEdit);
                 transacction.commit();
                 break;
+
+                 */
+
+            Intent intent = new Intent(getApplicationContext(), EditarPreferencias.class);
+            startActivity(intent);
         }
 
         return true;
