@@ -2,6 +2,8 @@ package com.example.practica1tema6_pmdm;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,20 +12,22 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import static android.Manifest.permission.CALL_PHONE;
 
 public class Personas extends AppCompatActivity {
 
-    private static final String MY_PREFS_NAME = "personiya";
     ImageView imgt1, imgt2, imgt3, imgt4, imgt5, imgt6;
 
     String telefono, email;
+
+    Fragment fragEdit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +47,6 @@ public class Personas extends AppCompatActivity {
         registerForContextMenu(imgt4);
         registerForContextMenu(imgt5);
         registerForContextMenu(imgt6);
-
 
     }
 
@@ -115,5 +118,25 @@ public class Personas extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menuedit, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        String mensaje = "";
+        switch (item.getItemId()) {
+            case R.id.mnEdit:
+                fragEdit = new FragEditar();
+                FragmentTransaction transacction = getSupportFragmentManager().beginTransaction();
+                transacction.add(R.id.contenedor, fragEdit);
+                transacction.commit();
+                break;
+        }
+
+        return true;
+    }
 }
