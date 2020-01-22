@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".BlocDeNotas">
 
+    <EditText
+        android:id="@+id/txtArea"
+        android:layout_width="387dp"
+        android:layout_height="704dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
